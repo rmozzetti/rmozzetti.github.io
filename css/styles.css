@@ -20,6 +20,14 @@ nav a:hover {
   font-size: 2rem;
   border-bottom: 2px solid orange;
 }
+
+nav a:hover {
+  color: #fff;
+  background-color: #173f73;
+  font-size: 2rem;
+  border-bottom: 2px solid orange;
+}
+
 main {
   display: flex; /* Use Flexbox for layout */
   justify-content: center; /* Center the items horizontally */
@@ -29,13 +37,6 @@ main {
 #about-main {
   display: block; /* Override the flex display for the about page */
   margin: 0 auto; /* Center the content horizontally */
-}
-
-nav a:hover {
-  color: #fff;
-  background-color: #173f73;
-  font-size: 2rem;
-  border-bottom: 2px solid orange;
 }
 
 #table-header {
