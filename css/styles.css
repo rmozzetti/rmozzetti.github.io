@@ -42,9 +42,8 @@ main {
 
 table{
   border-collapse: collapse; /* Collapse borders into a single border */
-  margin-bottom: 2rem; /* Add some space below the table */
+  margin: 0 auto 2rem; /* Add some space below the table, and center it on the page */
   width: 75%;
-  justify-content: center; /* Center the items horizontally */
 } 
 
 th, td {
@@ -68,5 +67,5 @@ footer {
 }
 
 footer img {
-  width: 25%
+  width: 200px;
 }
