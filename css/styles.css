@@ -54,7 +54,7 @@ th, td {
 
 .interests-list {
   margin: 0 auto; /* Center the content horizontally */
-  margin: 2rem;
+  width: 600px;
 }
   
 .interest-item {
