@@ -53,4 +53,15 @@ th, td {
 }
 
 .interests-list {
+  margin: 0 auto; /* Center the content horizontally */
+  margin: 2rem;
+}
   
+.interest-item {
+  background-color: #173f73; /* Dark blue background */
+  color: #FFFFFF; /* White text */
+}
+
+footer {
+  font-size: 0.75rem;
+}
