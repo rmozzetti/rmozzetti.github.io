@@ -21,7 +21,7 @@ nav a:hover {
   border-bottom: 2px solid orange;
 }
 
-nav a:hover {
+nav a:active {
   color: #fff;
   background-color: #173f73;
   font-size: 2rem;
