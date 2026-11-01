@@ -44,6 +44,7 @@ table{
   border-collapse: collapse; /* Collapse borders into a single border */
   margin-bottom: 2rem; /* Add some space below the table */
   width: 75%;
+  justify-content: center; /* Center the items horizontally */
 } 
 
 th, td {
