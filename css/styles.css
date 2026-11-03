@@ -82,3 +82,14 @@ footer img {
 figure img {
   width: 200px;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 10px solid #000000;
+}
