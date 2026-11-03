@@ -106,4 +106,5 @@ figure img {
 .paragraph {
   width: 75%;
   text-align: center;
+  justify-content: center; /* Center the items horizontally */
 }
