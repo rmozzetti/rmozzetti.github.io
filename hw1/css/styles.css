@@ -32,7 +32,8 @@ main {
   display: flex; /* Use Flexbox for layout */
   justify-content: center; /* Center the items horizontally */
   gap: 2rem;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  /* flex-wrap: wrap;  Allow items to wrap on smaller screens */
+  flex-direction: column; /* Makes sections stack horizontally */
 }
 #about-main {
   display: block; /* Override the flex display for the about page */
@@ -92,4 +93,8 @@ figure img {
 .card {
   padding: 1.5rem;
   border: 10px solid #000000;
+}
+
+.introduction {
+  width: 75%;
 }
