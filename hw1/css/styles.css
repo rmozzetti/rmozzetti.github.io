@@ -1,0 +1,84 @@
+body {
+  background-color: #FFFFFF;
+  color: #000000; /* Set text color to black for contrast */
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;  /* Set line height for better readability */
+}
+header, nav, main, footer {
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #00FF00;
+  text-decoration: none; /* Remove underline from links */
+}
+nav a:hover {
+  color: #fff;
+  background-color: #173f73;
+  font-size: 2rem;
+  border-bottom: 2px solid orange;
+}
+
+nav a.active {
+  color: #fff;
+  background-color: #173f73;
+  font-size: 2rem;
+  border-bottom: 2px solid orange;
+}
+
+main {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center the items horizontally */
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+#about-main {
+  display: block; /* Override the flex display for the about page */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+#table-header {
+  background-color: #173f73; /* Dark blue background for header */
+  color: #FFFFFF; /* White text for header */
+}
+
+.table-row {
+  background-color: #f2f2f2; /* Light gray background for rows */
+  color: #000000; /* Black text because white text was hard to see */
+} 
+
+table{
+  border-collapse: collapse; /* Collapse borders into a single border */
+  margin: 0 auto 2rem; /* Add some space below the table, and center it on the page */
+  width: 75%;
+} 
+
+th, td {
+  border: 1px solid #dbe4f0; /* Add a border to the table, header cells, and data cells */
+  padding: 0.5rem; /* Add padding to cells for better readability */
+  text-align: left; /* Align text to the left */
+}
+
+.interests-list {
+  margin: 0 auto; /* Center the content horizontally */
+  width: 600px;
+}
+  
+.interest-item {
+  background-color: #173f73; /* Dark blue background */
+  color: #FFFFFF; /* White text */
+}
+
+footer {
+  font-size: 0.75rem;
+}
+
+footer img {
+  width: 200px;
+}
+
+figure img {
+  width: 200px;
+}
