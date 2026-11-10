@@ -136,6 +136,7 @@ function setMarkImage(index, imageName, altText) {
   markContainer.textContent = "";
 
   let img = document.createElement("img");
+  img.className = "mark-image";
   img.src = `img/${imageName}`;
   img.alt = altText;
   markContainer.appendChild(img);
@@ -145,7 +146,7 @@ function rightAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Correct!";
   feedback.className = "bg-success text-white";
-  setMarkImage(index, "checkmark.jpg", "Checkmark");
+  setMarkImage(index, "checkmark.png", "Checkmark");
   score += 10;
 }
 
@@ -153,7 +154,7 @@ function wrongAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Incorrect!";
   feedback.className = "bg-warning text-white";
-  setMarkImage(index, "xmark.jpg", "X mark");
+  setMarkImage(index, "xmark.png", "X mark");
 }
 
 function shuffleArray(array) {
