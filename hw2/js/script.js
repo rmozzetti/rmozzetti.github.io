@@ -66,7 +66,7 @@ function gradeQuiz() {
     wrongAnswer(4);
   }
 
-  let q5Response = document.querySelector("#q5").value;
+  let q5Response = document.querySelector("#q5").value.toLowerCase();
   if (q5Response === "6" || q5Response === "six") {
     rightAnswer(5);
   } else {
