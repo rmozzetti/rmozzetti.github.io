@@ -1,6 +1,7 @@
 document.querySelector("button").addEventListener("click", gradeQuiz);
 
 displayQ4Choices();
+displayQ8Choices();
 
 let score = 0;
 
@@ -65,6 +66,51 @@ function gradeQuiz() {
     wrongAnswer(4);
   }
 
+  let q5Response = document.querySelector("#q5").value;
+  if (q5Response === "6") {
+    rightAnswer(5);
+  } else {
+    wrongAnswer(5);
+  }
+
+  let q6Response = document.querySelector("#q6").value;
+  if (q6Response === "tba") {
+    rightAnswer(6);
+  } else {
+    wrongAnswer(6);
+  }
+
+  if (!document.querySelector("#ri").checked &&
+    document.querySelector("#hi").checked &&
+    document.querySelector("#ak").checked &&
+    !document.querySelector("#fl").checked) {
+    rightAnswer(7);
+  } else {
+    wrongAnswer(7);
+  }
+
+  let selectedQ8 = document.querySelector("input[name=q8]:checked");
+
+  if (selectedQ8 !== null && selectedQ8.value === "Golden Gate Bridge") {
+    rightAnswer(8);
+  } else {
+    wrongAnswer(8);
+  }
+
+  let q9Response = document.querySelector("#q9").value.toLowerCase();
+  if (q9Response === "california") {
+    rightAnswer(9);
+  } else {
+    wrongAnswer(9);
+  }
+
+  let q10Response = document.querySelector("#q10").value;
+  if (q10Response === "ls") {
+    rightAnswer(10);
+  } else {
+    wrongAnswer(10);
+  }
+
   document.querySelector("#totalScore").textContent = `Total Score: ${score}`;
 
   if (score > 80) {
@@ -100,7 +146,7 @@ function rightAnswer(index) {
   feedback.textContent = "Correct!";
   feedback.className = "bg-success text-white";
   setMarkImage(index, "checkmark.png", "Checkmark");
-  score += 20;
+  score += 10;
 }
 
 function wrongAnswer(index) {
@@ -130,6 +176,30 @@ function displayQ4Choices() {
     let input = document.createElement("input");
     input.type = "radio";
     input.name = "q4";
+    input.id = choice;
+    input.value = choice;
+
+    let label = document.createElement("label");
+    label.htmlFor = choice;
+    label.textContent = choice;
+
+    choicesContainer.appendChild(input);
+    choicesContainer.appendChild(label);
+    choicesContainer.appendChild(document.createTextNode(" "));
+  }
+}
+
+function displayQ8Choices() {
+  let q8ChoicesArray = ["Golden Gate Bridge", "Bay Bridge", "Brooklyn Bridge", "George Washington Bridge"];
+  shuffleArray(q8ChoicesArray);
+
+  let choicesContainer = document.querySelector("#q8Choices");
+  choicesContainer.textContent = "";
+
+  for (let choice of q8ChoicesArray) {
+    let input = document.createElement("input");
+    input.type = "radio";
+    input.name = "q8";
     input.id = choice;
     input.value = choice;
 
