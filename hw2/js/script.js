@@ -67,13 +67,13 @@ function gradeQuiz() {
 
   document.querySelector("#totalScore").textContent = `Total Score: ${score}`;
 
-  if (score < 80) {
+  if (score > 80) {
     totalScore.className = "green";
   } else {
     totalScore.className = "red";
   }
 
-  let congratsMessage = document.querySelector("congratsMessage");
+  let congratsMessage = document.querySelector("#congratsMessage");
 
   if (score > 80) {
     congratsMessage.textContent = "Congrats, you scored over 80 points!";
