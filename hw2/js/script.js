@@ -145,7 +145,7 @@ function rightAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Correct!";
   feedback.className = "bg-success text-white";
-  setMarkImage(index, "checkmark.png", "Checkmark");
+  setMarkImage(index, "checkmark.jpg", "Checkmark");
   score += 10;
 }
 
@@ -153,7 +153,7 @@ function wrongAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Incorrect!";
   feedback.className = "bg-warning text-white";
-  setMarkImage(index, "xmark.png", "X mark");
+  setMarkImage(index, "xmark.jpg", "X mark");
 }
 
 function shuffleArray(array) {
