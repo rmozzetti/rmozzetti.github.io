@@ -44,7 +44,7 @@ header {
   padding: 1.5rem;
 }
 
-nav {
+header, nav, main, footer {
   text-align: center;
 }
 
