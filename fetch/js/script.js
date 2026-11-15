@@ -1,4 +1,4 @@
-document.querySelector("#zip").addEventListener("click", displayCity);
+document.querySelector("#zip").addEventListener("change", displayCity);
 
 async function displayCity() {
   try {
