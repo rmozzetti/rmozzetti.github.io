@@ -1,32 +1,77 @@
-body {
-  background-color: #FFFFFF;
-  color: #000000; /* Set text color to black for contrast */
-  font-family: "Open Sans", Arial, sans-serif;
-  line-height: 1.6;  /* Set line height for better readability */
+/* Robert Mozzetti - Master CSS Style */
+:root {
+  --background: #87B7E1;
+  --header: #304880;
+  --surface: #B4D4EF;
+  --surface-hover: #9D53A2;
+  --text: #182B50;
+  --accent: #C078C0;
+  --border: #6385B5;
+  --white: #FFF;
+  --form-background: #DCEBFA;
 }
-header, nav, main, footer {
+
+/* Body */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Century Gothic", Arial, sans-serif;
+  line-height: 1.6;  /* Set line height for better readability */
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: var(--text);
   text-align: center;
 }
+
+a {
+  color: var(--accent);
+}
+
+a: hover {
+  color: var(--text);
+}
+
+/* Header */
+
+header {
+  background-color: var(--header);
+  color: var(--text);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+nav {
+  text-align: center;
+}
+
 nav a {
   display: inline-block;
   padding: 1rem;
   font-size: 1.5rem;
-  color: #00FF00;
+  color: var(--accent);
   text-decoration: none; /* Remove underline from links */
+  border-bottom: 2px solid transparent;
+  border-radius: 5px;
+  transition: color 0.2s, background-color 0.2s;
 }
+
 nav a:hover {
-  color: #fff;
-  background-color: #173f73;
-  font-size: 2rem;
-  border-bottom: 2px solid orange;
+  color: var(--text);
+  background-color: var(--surface-hover);
+  border-bottom: 2px solid var(--accent);
 }
 
 nav a.active {
-  color: #fff;
-  background-color: #173f73;
-  font-size: 2rem;
-  border-bottom: 2px solid orange;
+  color: var(--text);
+  background-color: var(--surface-hover);
+  border-bottom: 2px solid var(--accent);
 }
+
+/* Main */
 
 main {
   display: flex; /* Use Flexbox for layout */
@@ -39,14 +84,16 @@ main {
   margin: 0 auto; /* Center the content horizontally */
 }
 
+/* Table */ 
+
 #table-header {
-  background-color: #173f73; /* Dark blue background for header */
-  color: #FFFFFF; /* White text for header */
+  background-color: var(--header);
+  color: var(--text);
 }
 
 .table-row {
-  background-color: #f2f2f2; /* Light gray background for rows */
-  color: #000000; /* Black text because white text was hard to see */
+  background-color: var(--surface);
+  color: var(--text);
 } 
 
 table{
@@ -61,15 +108,19 @@ th, td {
   text-align: left; /* Align text to the left */
 }
 
+/* Lists */
+
 .interests-list {
   margin: 0 auto; /* Center the content horizontally */
   width: 600px;
 }
   
 .interest-item {
-  background-color: #173f73; /* Dark blue background */
-  color: #FFFFFF; /* White text */
+  background-color: var(--surface);
+  color: var(--text);
 }
+
+/* Footer */
 
 footer {
   font-size: 0.75rem;
@@ -83,6 +134,7 @@ figure img {
   width: 200px;
 }
 
+/* Grid */ 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -91,5 +143,5 @@ figure img {
 
 .card {
   padding: 1.5rem;
-  border: 10px solid #000000;
+  border: 10px solid var(--border);
 }
