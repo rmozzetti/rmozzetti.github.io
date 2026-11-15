@@ -60,6 +60,27 @@ async function loadStates() {
   }
 }
 
-function checkUsername() {
-  alert(document.querySelector("#username").value);
+async function checkUsername() {
+  let username = document.querySelector("#username").value;
+  let usernameError = document.querySelector("#usernameError");
+
+  if (username.length === 0) {
+    usernameError.textContent = "Username required";
+    usernameError.style.color = "red";
+    return false;
+  }
+
+  let url = `https://csumb.space/api/usernamesAPI.php?username=${username}`;
+  let response = await fetch(url);
+  let data = await response.json();
+
+  if (data.available) {
+    usernameError.textContent = "Username available!";
+    usernameError.style.color = "green";
+    return true;
+  } else {
+    usernameError.textContent = "Username taken";
+    usernameError.style.color = "red";
+    return false;
+  }
 }
