@@ -1,0 +1,147 @@
+/* Robert Mozzetti - Master CSS Style */
+:root {
+  --background: #87B7E1;
+  --header: #304880;
+  --surface: #B4D4EF;
+  --surface-hover: #9D53A2;
+  --text: #182B50;
+  --accent: #C078C0;
+  --border: #6385B5;
+  --white: #FFF;
+  --form-background: #DCEBFA;
+}
+
+/* Body */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Century Gothic", Arial, sans-serif;
+  line-height: 1.6;  /* Set line height for better readability */
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: var(--text);
+  text-align: center;
+}
+
+a {
+  color: var(--accent);
+}
+
+a: hover {
+  color: var(--text);
+}
+
+/* Header */
+
+header {
+  background-color: var(--header);
+  color: var(--text);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header, nav, main, footer {
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-decoration: none; /* Remove underline from links */
+  border-bottom: 2px solid transparent;
+  border-radius: 5px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+nav a:hover {
+  color: var(--text);
+  background-color: var(--surface-hover);
+  border-bottom: 2px solid var(--accent);
+}
+
+nav a.active {
+  color: var(--text);
+  background-color: var(--surface-hover);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Main */
+
+main {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center the items horizontally */
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+#about-main {
+  display: block; /* Override the flex display for the about page */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+/* Table */ 
+
+#table-header {
+  background-color: var(--header);
+  color: var(--text);
+}
+
+.table-row {
+  background-color: var(--surface);
+  color: var(--text);
+} 
+
+table{
+  border-collapse: collapse; /* Collapse borders into a single border */
+  margin: 0 auto 2rem; /* Add some space below the table, and center it on the page */
+  width: 75%;
+} 
+
+th, td {
+  border: 1px solid #dbe4f0; /* Add a border to the table, header cells, and data cells */
+  padding: 0.5rem; /* Add padding to cells for better readability */
+  text-align: left; /* Align text to the left */
+}
+
+/* Lists */
+
+.interests-list {
+  margin: 0 auto; /* Center the content horizontally */
+  width: 600px;
+}
+  
+.interest-item {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+/* Footer */
+
+footer {
+  font-size: 0.75rem;
+}
+
+footer img {
+  width: 200px;
+}
+
+figure img {
+  width: 200px;
+}
+
+/* Grid */ 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 10px solid var(--border);
+}
