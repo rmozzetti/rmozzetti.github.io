@@ -71,7 +71,7 @@ async function loadCounties() {
   countyMenu.textContent = "";
 
   try {
-    let url = "https://csumb.space/api/countyListAPI.php=${state}";
+    let url = "https://csumb.space/api/countyListAPI.php?state=${state}";
     let response = await fetch(url);
     let data = await response.json();
 
@@ -165,7 +165,7 @@ async function suggestPassword() {
     let response = await fetch(url);
     let data = await response.json();
 
-    document.querySelector("#suggestedPassword".textContent = 'Suggested password: ${data.password}';
+    document.querySelector("#suggestedPassword").textContent = `Suggested password: ${data.password}`;
   } catch (error) {
     console.error(error);
   }
