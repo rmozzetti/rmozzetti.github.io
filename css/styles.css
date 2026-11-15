@@ -16,7 +16,7 @@
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: "Century Gothic", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   line-height: 1.6;  /* Set line height for better readability */
   margin: 0;
   min-height: 100vh;
