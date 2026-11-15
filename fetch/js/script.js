@@ -93,6 +93,9 @@ async function validateForm(event) {
 
   let username = document.querySelector("#username").value;
   let usernameError = document.querySelector("#usernameError");
+  let password = document.querySelector("#password").value;
+  let passwordError = document.querySelector("#passwordError");
+  let passwordDuplicate = document.querySelector("#passwordDuplicate").value;
 
   usernameError.textContent = "";
 
@@ -107,6 +110,17 @@ async function validateForm(event) {
       isValid = false;
     }
   }
+
+  if (password.length < 6) {
+    passwordError.textContent = "Password must be 6 characters or more";
+    passwordError.style.color = "red";
+    isValid = false;
+  } else if (password != passwordDuplicate) {
+    passwordError.textContent = "Passwords don't match";
+    passwordError.style.color = "red";
+    isValid = false;
+  }
+    
 
   if (isValid) {
     document.querySelector("#signupForm").submit();
