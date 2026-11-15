@@ -164,7 +164,8 @@ async function suggestPassword() {
     let url = "https://csumb.space/api/suggestedPassword.php?length=8";
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
+
+    document.querySelector("#suggestedPassword".textContent = 'Suggested password: ${data.password}';
   } catch (error) {
     console.error(error);
   }
