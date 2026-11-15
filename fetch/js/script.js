@@ -86,7 +86,29 @@ async function checkUsername() {
   }
 }
 
-function validateForm(event) {
+async function validateForm(event) {
   event.preventDefault();
-  alert("Form submission stopped for testing.");
+
+  let isValid = true;
+
+  let username = document.querySelector("#username").value;
+  let usernameError = document.querySelector("#usernameError");
+
+  usernameError.textContent = "";
+
+  if (username.length === 0) {
+    usernameError.textContent = "Username required";
+    usernameError.style.color = "red";
+    isValid = false;
+  } else {
+    let usernameAvailable = await checkUsername();
+
+    if (usernameAvailable === false) {
+      isValid = false;
+    }
+  }
+
+  if (isValid) {
+    document.querySelector("#signupForm").submit();
+  }
 }
