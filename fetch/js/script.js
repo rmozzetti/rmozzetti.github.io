@@ -5,7 +5,8 @@ async function displayCity() {
     let zipCode = document.querySelector("#zip").value;
     let url = `https://csumb.space/api/cityInfoAPI.php?zip=${zipCode}`;
     let response = await fetch(url);
-    let data = await response.json();
+    let rawData = await response.text();
+    console.log("API Response:", rawData);
 
     //the API returns false when the zip code is not found, so we can check for that case before trying to access the city property
     if (data === false) {
