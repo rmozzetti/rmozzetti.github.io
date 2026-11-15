@@ -1,14 +1,14 @@
 /* Robert Mozzetti - Master CSS Style */
 :root {
-  --background: #87B7E1;
+  --background: #B7D9F3;
   --header: #304880;
-  --surface: #B4D4EF;
-  --surface-hover: #9D53A2;
+  --surface: #D5E8F8;
+  --surface-hover: #C078C0;
   --text: #182B50;
-  --accent: #C078C0;
+  --accent: #A14CA5;
   --border: #6385B5;
   --white: #FFF;
-  --form-background: #DCEBFA;
+  --form-background: #E8F2FC;
 }
 
 /* Body */
@@ -31,7 +31,7 @@ a {
   color: var(--accent);
 }
 
-a: hover {
+a:hover {
   color: var(--text);
 }
 
@@ -39,9 +39,13 @@ a: hover {
 
 header {
   background-color: var(--header);
-  color: var(--text);
+  color: var(--white);
   text-align: center;
   padding: 1.5rem;
+}
+
+header h1, header h2, header h3 {
+  color: var(--white);
 }
 
 header, nav, main, footer {
@@ -52,7 +56,7 @@ nav a {
   display: inline-block;
   padding: 1rem;
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--white);
   text-decoration: none; /* Remove underline from links */
   border-bottom: 2px solid transparent;
   border-radius: 5px;
@@ -60,15 +64,20 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--text);
+  color: var(--white);
   background-color: var(--surface-hover);
   border-bottom: 2px solid var(--accent);
 }
 
 nav a.active {
-  color: var(--text);
+  color: var(--white);
   background-color: var(--surface-hover);
   border-bottom: 2px solid var(--accent);
+}
+
+nav a:hover i, nav a:active i, nav a:hover svg, nav a.active svg {
+  color: var(--white);
+  stroke: currentColor;
 }
 
 /* Main */
@@ -124,6 +133,12 @@ th, td {
 
 footer {
   font-size: 0.75rem;
+  background-color: var(--header);
+  color: var(--white)
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.75rem;
 }
 
 footer img {
@@ -144,32 +159,4 @@ figure img {
 .card {
   padding: 1.5rem;
   border: 10px solid var(--border);
-}
-
-.card img {
-  height: 400px;
-  object-fit: cover;
-  max-width: 100%;
-}
-
-.paragraph {
-  width: 75%;
-  text-align: center;
-  margin: 0 auto; /* Center the content horizontally */
-}
-
-details {
-  border: 4px solid #000000;
-  padding: 1.5rem;
-  width: 50%;
-}
-
-summary {
-  font-weight: bold;
-  font-style: italic;
-}
-
-details p {
-  text-align: center;
-  font-style: italic;
 }
