@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadStates);
 document.querySelector("#zip").addEventListener("change", displayCity);
+document.querySelector("#state").addEventListener("change", loadCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
 document.querySelector("#signupForm").addEventListener("submit", validateForm);
 
@@ -24,6 +25,8 @@ async function displayCity() {
 
   } catch (error) {
     document.querySelector("#city").textContent = "Unable to retrieve city";
+    document.querySelector("#latitude").textContent = "";
+    document.querySelector("#longitude").textContent = "";
     console.error(error);
   }
 }
@@ -61,6 +64,35 @@ async function loadStates() {
   }
 }
 
+async function loadCounties() {
+  let state = document.querySelector("#state").value;
+  let countyMenu = document.querySelector("#county");
+
+  countyMenu.textContent = "";
+
+  try {
+    let url = "https://csumb.space/api/countyListAPI.php=${state}";
+    let response = await fetch(url);
+    let data = await response.json();
+
+    for (let item of data) {
+      let option = document.createElement("option");
+      option.value = item.county;
+      option.textContent = item.county;
+      countyMenu.appendChild(option);
+    }
+  } catch (error) {
+    console.error(error);
+
+    countyMenu.textContent = "";
+
+    let errorOption = document.createElement("option");
+    errorOption.value = "";
+    errorOption.textContent = "Unable to load counties";
+    countyMenu.appendChild(errorOption);
+  }
+}
+
 async function checkUsername() {
   let username = document.querySelector("#username").value;
   let usernameError = document.querySelector("#usernameError");
@@ -95,7 +127,7 @@ async function validateForm(event) {
   let usernameError = document.querySelector("#usernameError");
   let password = document.querySelector("#password").value;
   let passwordError = document.querySelector("#passwordError");
-  let passwordDuplicate = document.querySelector("#passwordDuplicate").value;
+  let passwordAgain = document.querySelector("#passwordAgain").value;
 
   usernameError.textContent = "";
 
@@ -115,7 +147,7 @@ async function validateForm(event) {
     passwordError.textContent = "Password must be 6 characters or more";
     passwordError.style.color = "red";
     isValid = false;
-  } else if (password != passwordDuplicate) {
+  } else if (password != passwordAgain) {
     passwordError.textContent = "Passwords don't match";
     passwordError.style.color = "red";
     isValid = false;
@@ -124,5 +156,16 @@ async function validateForm(event) {
 
   if (isValid) {
     document.querySelector("#signupForm").submit();
+  }
+}
+
+async function suggestPassword() {
+  try {
+    let url = "https://csumb.space/api/suggestedPassword.php?length=8";
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
   }
 }
