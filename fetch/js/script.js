@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadStates);
 document.querySelector("#zip").addEventListener("change", displayCity);
+document.querySelector("#username").addEventListener("change", checkUsername);
 
 async function displayCity() {
   try {
@@ -57,4 +58,8 @@ async function loadStates() {
     errorOption.textContent = "Unable to load states";
     stateMenu.appendChild(errorOption);
   }
+}
+
+function checkUsername() {
+  alert(document.querySelector("#username").value);
 }
