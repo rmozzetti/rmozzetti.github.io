@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadStates);
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#username").addEventListener("change", checkUsername);
+document.querySelector("#signupForm").addEventListener("submit", validateForm);
 
 async function displayCity() {
   try {
@@ -83,4 +84,9 @@ async function checkUsername() {
     usernameError.style.color = "red";
     return false;
   }
+}
+
+function validateForm(event) {
+  event.preventDefault();
+  alert("Form submission stopped for testing.");
 }
