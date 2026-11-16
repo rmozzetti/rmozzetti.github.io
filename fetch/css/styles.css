@@ -177,9 +177,17 @@ form {
 }
 
 form label {
-  display: inline-block;
+  display: block;
   margin: 0.5rem;
   font-weight: bold;
+}
+
+form lavel:has(input[type="radio"]) {
+  display: inline-block;
+}
+
+form input[type="text"], form input[type="password"], form select {
+  display: block;
 }
 
 button {
@@ -214,3 +222,8 @@ input[type="text"]:focus, input[type="password"]:focus, select:focus {
   border-color: var(--header);
   outline: none;
 }
+
+input[type="radio"] {
+  accent-color: var(--header);
+}
+  
