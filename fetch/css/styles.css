@@ -213,7 +213,7 @@ input[type="text"], input[type="password"], select {
   border: 2px solid var(--border);
   border-radius:8px;
   padding: 0.5rem;
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
   font-family: inherit;
   font-size:inherit;
