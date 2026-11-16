@@ -85,10 +85,10 @@ nav a:hover i, nav a.active i, nav a:hover svg, nav a.active svg {
 /* Main */
 
 main {
-  display: flex; /* Use Flexbox for layout */
-  justify-content: center; /* Center the items horizontally */
+  display: grid;
+  grid-template-columns: minmax(1, 1fr);
+  justify-items: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   flex: 1;
 }
 
@@ -196,4 +196,21 @@ button {
 
 button:hover {
   background-color: var(--surface-hover);
+}
+
+/* Inputs */
+
+input[type="text"], input[type="password"], select {
+  background-color: var(--white);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius:8px;
+  padding: 0.5rem;
+  width: 220px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+  border-color: var(--header);
+  outline: none;
 }
