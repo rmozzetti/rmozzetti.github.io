@@ -20,6 +20,8 @@ body {
   line-height: 1.6;  /* Set line height for better readability */
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -75,7 +77,7 @@ nav a.active {
   border-bottom: 2px solid var(--accent);
 }
 
-nav a:hover i, nav a:active i, nav a:hover svg, nav a.active svg {
+nav a:hover i, nav a.active i, nav a:hover svg, nav a.active svg {
   color: var(--white);
   stroke: currentColor;
 }
@@ -83,11 +85,12 @@ nav a:hover i, nav a:active i, nav a:hover svg, nav a.active svg {
 /* Main */
 
 main {
-  display: flex; /* Use Flexbox for layout */
-  justify-content: center; /* Center the items horizontally */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex: 1;
 }
+
 #about-main {
   display: block; /* Override the flex display for the about page */
   margin: 0 auto; /* Center the content horizontally */
@@ -134,10 +137,9 @@ th, td {
 footer {
   font-size: 0.75rem;
   background-color: var(--header);
-  color: var(--white)
+  color: var(--white);
   text-align: center;
   padding: 2rem;
-  margin-top: 3rem;
   font-size: 0.75rem;
 }
 
@@ -160,3 +162,70 @@ figure img {
   padding: 1.5rem;
   border: 10px solid var(--border);
 }
+
+/* Forms */
+
+form {
+  background-color: var(--form-background);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+form label {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+}
+
+form label:has(input[type="radio"]) {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+
+form input[type="text"], form input[type="password"], form select {
+  display: block;
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--surface-hover);
+}
+
+/* Inputs */
+
+input[type="text"], input[type="password"], select {
+  background-color: var(--white);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius:8px;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size:inherit;
+  display: block;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+  border-color: var(--header);
+  outline: none;
+}
+
+input[type="radio"] {
+  accent-color: var(--header);
+}
+  
