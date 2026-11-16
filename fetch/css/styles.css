@@ -86,8 +86,7 @@ nav a:hover i, nav a.active i, nav a:hover svg, nav a.active svg {
 
 main {
   display: grid;
-  grid-template-columns: minmax(1, 1fr);
-  justify-items: center;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   flex: 1;
 }
@@ -171,8 +170,7 @@ form {
   border: 2px solid var(--border);
   border-radius: 12px;
   padding: 2rem;
-  /* width: 90%; */
-  /* max-width: 500px; */
+  width: 100%;
   box-sizing: border-box;
   text-align: left;
   margin: 2rem 0;
@@ -206,7 +204,7 @@ input[type="text"], input[type="password"], select {
   border: 2px solid var(--border);
   border-radius:8px;
   padding: 0.5rem;
-  width: 220px;
+  max-width: 100%;
   box-sizing: border-box;
   font-family: inherit;
   font-size:inherit;
