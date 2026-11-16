@@ -22,48 +22,48 @@
 <form id="signupForm" action="welcome.html">
   <label> First Name:
     <input type="text" id="fName" name="fName">
-  </label><br>
+  </label>
 
   <label>Last Name:
      <input type="text" id="lName" name="lName">
-  </label><br>
+  </label>
 
   <label>Gender:</label>
   <label><input type="radio" name="gender" value="m"> Male</label>
-  <label><input type="radio" name="gender" value="f"> Female</label><br>
+  <label><input type="radio" name="gender" value="f"> Female</label>
 
   <label>Zip Code:
      <input type="text" id="zip" name="zip">
-  </label><br>
+  </label>
 
-  <label>City: <span id="city"></span></label><br>
-  <label>Latitude: <span id="latitude"></span></label><br>
-  <label>Longitude: <span id="longitude"></span></label><br>
+  <label>City: <span id="city"></span></label>
+  <label>Latitude: <span id="latitude"></span></label>
+  <label>Longitude: <span id="longitude"></span></label>
 
 <label>State:
   <select id="state" name="state">
     <option value="">Loading states...</option>
   </select>
-</label><br>
+</label>
 
   <label>Select a County:
      <select id="county" name="county"></select>
-  </label><br>
+  </label>
 
   <label>Desired Username:
      <input type="text" id="username" name="username">
   </label>
-  <span id="usernameError"></span><br>
+  <span id="usernameError"></span>
 
   <label>Password:
   <input type="password" id="password" name="password" onclick="suggestPassword()">
   </label>
-  <span id="suggestedPassword"></span><br>
+  <span id="suggestedPassword"></span>
 
   <label>Type Password Again:
      <input type="password" id="passwordAgain" name="passwordAgain">
   </label><br>
-  <span id="passwordError"></span><br>
+  <span id="passwordError"></span>
 
   <button>Sign up!</button>
 </form>
