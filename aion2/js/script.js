@@ -34,13 +34,13 @@ async function getNews() {
     console.log(data);
 
     document.querySelector("#newsTitle1").textContent = data.appnews.newsitems[0].title;
-    document.querySelector("#newsURL1").textContent = data.appnews.newsitems[0].url;
+    document.querySelector("#newsURL1").href = data.appnews.newsitems[0].url;
 
     document.querySelector("#newsTitle2").textContent = data.appnews.newsitems[1].title;
-    document.querySelector("#newsURL2").textContent = data.appnews.newsitems[1].url;
+    document.querySelector("#newsURL2").href = data.appnews.newsitems[1].url;
 
     document.querySelector("#newsTitle3").textContent = data.appnews.newsitems[2].title;
-    document.querySelector("#newsURL3").textContent = data.appnews.newsitems[2].url;
+    document.querySelector("#newsURL3").href = data.appnews.newsitems[2].url;
   } catch (error) {
     console.error(error);
     document.querySelector("#results").textContent = "Unable to retrieve recent news.";
