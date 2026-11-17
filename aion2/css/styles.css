@@ -227,7 +227,9 @@ input[type="text"]:focus, input[type="password"]:focus, select:focus {
 input[type="radio"] {
   accent-color: var(--header);
 }
-  
+
+/* News */
+
 #news {
   white-space: pre-line;
   text-align: left;
@@ -248,4 +250,12 @@ input[type="radio"] {
   display: inline-block;
   font-size: 1.1rem;
   margin-bottom: 1rem;
+}
+
+.newsArticle {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
