@@ -260,3 +260,7 @@ input[type="radio"] {
   margin-bottom: 1.5rem;
   width: 100%
 }
+
+#results {
+  margin-bottom: 1rem;
+}
