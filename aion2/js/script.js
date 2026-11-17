@@ -1,4 +1,5 @@
 document.querySelector("#checkPlayerCount").addEventListener("click", checkPlayers);
+getNews();
 
 async function checkPlayers() {
   try {
