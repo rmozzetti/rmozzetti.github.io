@@ -33,11 +33,11 @@ async function getNews() {
     let data = await response.json();
     console.log(data);
     document.querySelector("#news").textContent = data.appnews.newsitems[0].title + "\n"
-      + data.appnews.newsitems[0].contents + "\n"
+      + data.appnews.newsitems[0].url + "\n"
       + data.appnews.newsitems[1].title + "\n"
-      + data.appnews.newsitems[1].contents + "\n"
+      + data.appnews.newsitems[1].url + "\n"
       + data.appnews.newsitems[2].title + "\n"
-      + data.appnews.newsitems[2].contents;
+      + data.appnews.newsitems[2].url;
   } catch (error) {
     console.error(error);
     document.querySelector("#results").textContent = "Unable to retrieve recent news.";
