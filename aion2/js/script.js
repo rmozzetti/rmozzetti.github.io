@@ -2,10 +2,8 @@ document.querySelector("#checkPriceButton").addEventListener("click", checkPrice
 
 async function checkPrice(event) {
   try {
-    /*let itemID = "610610016";
-    let serverID = "11101";*/
-    let characterName = "rob";
-    let url = `https://api-search.plaync.com/aion2global/search/v2/character?keyword=${characterName}&region=nae&localeInfo=en-US`;
+    let appID = "3393110";
+    let url = `https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=${appID}`;
     let response = await fetch(url);
 
     if (!response.ok) {
@@ -14,9 +12,9 @@ async function checkPrice(event) {
     
     let data = await response.json();
     console.log(data);
-    document.querySelector("#results").textContent = data.price;
+    document.querySelector("#results").textContent = data.count;
   } catch (error) {
     console.error(error);
-    document.querySelector("#results").textContent = "Unable to retrieve marketplace prices.";
+    document.querySelector("#results").textContent = "Unable to retrieve current player count.";
   }
 }
