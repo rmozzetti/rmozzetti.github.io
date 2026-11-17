@@ -1,14 +1,13 @@
 /* Robert Mozzetti - Master CSS Style */
 :root {
-  --background: #B7D9F3;
-  --header: #304880;
-  --surface: #D5E8F8;
-  --surface-hover: #C078C0;
-  --text: #182B50;
-  --accent: #A14CA5;
-  --border: #6385B5;
+  --background: #171C24;
+  --header: #080D14;
+  --surface: #242C37;
+  --surface-hover: #303D4E;
+  --text: #E8F0F8;
+  --accent: #00BFFF;
+  --border: #416A91;
   --white: #FFF;
-  --form-background: #E8F2FC;
 }
 
 /* Body */
@@ -229,3 +228,6 @@ input[type="radio"] {
   accent-color: var(--header);
 }
   
+#news {
+  white-space: pre-line;
+}
