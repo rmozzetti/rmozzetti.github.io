@@ -258,4 +258,5 @@ input[type="radio"] {
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  width: 100%
 }
