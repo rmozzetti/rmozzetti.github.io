@@ -3,7 +3,7 @@ document.querySelector("#checkPriceButton").addEventListener("click", checkPrice
 async function checkPrice(event) {
   try {
     let appID = "3393110";
-    let url = `https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=${appID}`;
+    let url = `https://proxy.cors.dev/https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=${appID}`;
     let response = await fetch(url);
 
     if (!response.ok) {
