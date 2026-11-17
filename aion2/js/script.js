@@ -12,7 +12,7 @@ async function checkPrice(event) {
     
     let data = await response.json();
     console.log(data);
-    document.querySelector("#results").textContent = data.count;
+    document.querySelector("#results").textContent = data.response.player_count;
   } catch (error) {
     console.error(error);
     document.querySelector("#results").textContent = "Unable to retrieve current player count.";
