@@ -280,4 +280,5 @@ input[type="radio"] {
   border-readius: 5px;
   padding: 8px;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
