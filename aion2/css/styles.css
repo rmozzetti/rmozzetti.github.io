@@ -270,3 +270,13 @@ input[type="radio"] {
 #results {
   margin-bottom: 1rem;
 }
+
+#statSelect{
+  width: 250px;
+  max-width: 100%;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-readius: 5px;
+  padding: 8px;
+}
