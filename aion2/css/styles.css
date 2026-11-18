@@ -279,4 +279,5 @@ input[type="radio"] {
   border: 1px solid var(--border);
   border-readius: 5px;
   padding: 8px;
+  margin: 0 auto;
 }
