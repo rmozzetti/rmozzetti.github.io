@@ -14,7 +14,7 @@ async function checkStats() {
     if (selection === "players") {
       url = `https://proxy.cors.dev/https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=${appID}`;
     } else {
-      url = `https://proxy.cors.dev/https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?appID=${appID}`;
+      url = `https://proxy.cors.dev/https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?appid=${appID}`;
     }
     let response = await fetch(url);
 
@@ -27,7 +27,7 @@ async function checkStats() {
     if (selection === "players") {
       results.textContent = `Current Players: ${data.response.player_count}`;
     } else {
-      results.textContent = `Total Reviews: ${data.query_summary.total_reviews}`;
+      results.textContent = `Total Reviews: ${data.response.query_summary.total_reviews}`;
     }
   } catch (error) {
     console.error(error);
